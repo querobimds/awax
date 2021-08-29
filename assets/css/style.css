@@ -9,60 +9,60 @@
 
 header {
     height: 100px;
-    background-color: #000;
-    display: flex;
-    justify-content: center;
-    color: #fff;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 15px;
+    background-color: #000; 
 }
 
 .container {
-    width: 100%;
     max-width: 1140px;
+    margin: auto;
 }
 
 .header--site {
     display: flex;
+    height: 100px;
     align-items: center;
-    height: 100%;
+}
+
+.logo--site {
+    width: 100px;
 }
 
 .logo--img {
-    width: 205px;
-    background-color: blue;
-    margin-right: 20px;
+    width: 80px;
+    height: 80px;
+    background-color: #ba8b55;
 }
 
 .menu--site {
-    height: inherit;
-    width: 100%;
-}
-
-.menu--site nav {
-    height: inherit;
-}
-
-.menu--site ul {
-    height: 100%;
+    flex: 1;
     display: flex;
-    justify-content: space-between;
-    
+    justify-content: flex-end;
 }
 
-.menu--site ul, .menu--site li{
+.menu--site ul, .menu--site li {
     list-style: none;
 }
 
-.menu--site li a {
-    text-decoration: none;
-    color: #FFF;
-    height: 100%;
-    line-height: 100px;
+.menu--site ul {
+    display: flex;
 }
 
-.active, .menu--site li:hover {
-    border-bottom: 5px solid #b88a58;
-    cursor: pointer;
+.menu--site li a{
+    text-decoration: none;
+    margin-left: 15px;
+    text-transform: uppercase;
+    color: #FFF;
+    display: flex;
+    height: 100px;
+    align-items: center;
+    border-bottom: 5px solid transparent;
+    font-weight: bold;
+}
+
+.active{
+    border-bottom: 5px solid #ba8b55 !important;
+}
+
+.menu--site li a:hover{
+    border-bottom: 5px solid #ba8b55;
 }
