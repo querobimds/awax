@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;1,700&display=swap');
 
+:root {
+    --color-main: #ba8b55;
+    --color-black: #000;
+    --color-white: #FFF;
+}
 * {
     padding: 0;
     margin: 0;
@@ -7,9 +12,13 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 header {
     height: 100px;
-    background-color: #000; 
+    background-color: var(--color-black); 
 }
 
 .container {
@@ -30,7 +39,7 @@ header {
 .logo--img {
     width: 80px;
     height: 80px;
-    background-color: #ba8b55;
+    background-color: var(--color-main);
 }
 
 .menu--site {
@@ -60,9 +69,215 @@ header {
 }
 
 .active{
-    border-bottom: 5px solid #ba8b55 !important;
+    border-bottom: 5px solid var(--color-main) !important;
 }
 
 .menu--site li a:hover{
-    border-bottom: 5px solid #ba8b55;
+    border-bottom: 5px solid var(--color-main);
 }
+
+.button {
+    display: inline-block;
+    color: #FFF;
+    text-decoration: none;
+    padding: 10px 30px;
+    margin-top: 30px;
+    background-color: var(--color-main);
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+/* BANNER AND SLIDER AREA */
+
+.banner-area {
+    height: calc(100vh - 100px);
+    background-image: url('../images/bg.jpg');
+    background-size: cover;
+    background-position: bottom;
+    overflow: hidden;
+
+}
+
+.banner-area .slider-area-total {
+    width: calc(100vw * 3);
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: flex-end;
+    /* animation-name: move-slide;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+    animation-delay: 3s;
+    animation-fill-mode: forwards; */
+    
+}
+
+.banner-area .slide-content {
+    width: 100vw;
+    height: 65vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.banner-area .slide-headline {
+    color: var(--color-white);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.slide-headline .head-text {
+    font-size: 75px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.slide-headline span {
+    color: var(--color-main);
+}
+
+.slide-dots {
+    display: flex;
+    width: 100vw;
+    position: absolute;
+    justify-content: center;
+    margin-top: -60px;
+}
+
+.slide-dots div {
+    height: 15px;
+    width: 15px;
+    border: 2px solid var(--color-main);
+    border-radius: 50%;
+    margin: 0px 10px;
+    cursor: pointer;
+}
+
+.slide-dots .active {
+    background-color: var(--color-main);
+}
+/*
+@keyframes move-slide {
+    0% {
+        margin-left: 0;
+    }
+
+    33% {
+        margin-left: -100vw;
+    }
+
+    66% {
+        margin-left: -200vw;
+    }
+
+    100% {
+        margin-left: 0;
+    }
+}
+*/
+
+/* SECTION DEFAULT */
+
+.default {
+    padding: 50px 0;
+}
+.default .section-title,
+.default .section-desc {
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.default .section-title {
+    font-size: 25px;
+    margin-bottom: 10px;
+    
+}
+
+.default .section-desc {
+    font-size: 14px;
+    color: #d9d9d9;
+    margin-bottom: 50px;
+}
+
+.default.dark {
+    background-color: #000;
+}
+
+.default.dark .section-title,
+.default.dark .section-body {
+    color: #FFF;
+}
+/* END SECTION DEFAULT */
+
+/* SECTION ABOUT US */
+
+.about-us {
+    display: flex;
+}
+
+.about-us-left {
+    flex: 1;
+    margin-right: 35px;
+}
+
+.about-us-left p {
+    text-align: justify;
+}
+
+.about-us-right {
+    width: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+.about-us-right video {
+    box-shadow: 10px 10px 30px #272727;
+}
+
+/* END SECTION ABOUT US */
+
+/* SECTION SERVICES */
+
+.services {
+    display: flex;
+    justify-content: center;
+}
+.block-service {
+    height: 210px;
+    padding: 0 25px;
+    border-left: 1px solid #383838;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.services .block-service:last-child{
+    border-right: 1px solid #383838;
+}
+
+.service-title {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-top: 35px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.service-desc {
+    font-size: 15px;
+    color: #5b5b5b;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
