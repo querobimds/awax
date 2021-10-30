@@ -109,9 +109,9 @@ header {
     /* animation-name: move-slide;
     animation-duration: 15s;
     animation-iteration-count: infinite;
-    animation-timing-function: ease-out;
-    animation-delay: 3s;
-    animation-fill-mode: forwards; */
+    animation-timing-function: ease-in-out;
+    animation-delay: 1s; */
+
     
 }
 
@@ -159,25 +159,26 @@ header {
 .slide-dots .active {
     background-color: var(--color-main);
 }
+
 /*
 @keyframes move-slide {
     0% {
-        margin-left: 0;
+        transform: translateX(0);
     }
 
     33% {
-        margin-left: -100vw;
+        transform: translateX(-100vw);
     }
 
     66% {
-        margin-left: -200vw;
+        transform: translateX(-200vw);
     }
 
     100% {
-        margin-left: 0;
+        transform: translateX(0);
     }
-}
-*/
+} */
+
 
 /* SECTION DEFAULT */
 
@@ -273,6 +274,8 @@ header {
     color: #5b5b5b;
     text-align: center;
 }
+
+/* END SECTION SERVICES */
 
 
 
